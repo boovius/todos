@@ -1,25 +1,9 @@
-SnapShot API Testing
-====================
-https://github.com/syrusakbary/snapshottest
-
-
-Inventory API Tests
-===================
-
- - bulk inventory create/overwrite multiple inventories happy path
- - update inventory scenarios
-
-
-
-QA - Env in Kube
-================
-
-
-
 QA - e2e - CI
 =============
 
  - point e2e pipeline at e2e-ci deployment
+ - run successful scheduled
+ - slack messages integration on failures
 
 QA - Independence
 =================
@@ -28,13 +12,17 @@ QA - Independence
  - add setup config to Confluence
  - communicate to team
 
+##QA - Env in Kube
+
+ - deploy new namespace to kube
+
 
 NEED HELP
 =========
 
- - bringing down e2e, qa-dev, e2e-jenkins-spike deployments (feature_down not working) #ops
- - staging mirrored configuration (feature/values.yml - which services) to deploy to kube #ops
- - updating deployments (automating the update of deployments - after staging deploys in microservices's jenkins files) #ops #dane
+ - bringing down e2e, qa-dev, e2e-jenkins-spike deployments (feature_down not working) *#ops*
+ - staging mirrored configuration (feature/values.yml - which services) to deploy to kube *#ops*
+ - updating deployments (automating the update of deployments - after staging deploys in microservices's jenkins files) *#ops* *#dane*
 
 
 
@@ -50,3 +38,13 @@ Q/A
  Q - can we automate this process going foward?
 
 
+SnapShot API Testing
+====================
+https://github.com/syrusakbary/snapshottest
+
+
+Inventory API Tests
+===================
+
+ - bulk inventory create/overwrite multiple inventories happy path
+ - update inventory scenarios
