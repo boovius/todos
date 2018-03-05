@@ -20,10 +20,15 @@ QA - Independence
 NEED HELP
 =========
 
+### feature_down
  - bringing down e2e, qa-dev, e2e-jenkins-spike deployments (feature_down not working) *#ops*
+
+### migrations
+ - migrations, django migrations need to be run *#ops*
+
+### feature_up (mirror staging and auto deploys)
  - staging mirrored configuration (feature/values.yml - which services) to deploy to kube *#ops*
  - updating deployments (automating the update of deployments - after staging deploys in microservices's jenkins files) *#ops* *#dane*
-
 
 
 Q/A
