@@ -1,20 +1,21 @@
 QA - e2e - CI
 =============
 
- - point e2e pipeline at e2e-ci deployment
- - run successful scheduled
- - slack messages integration on failures
+ 1.- fix migrations for CI setup locally
+ 2.- run successful unscheduled e2e pipeline build
+ 3.- schedule runs
+ 4.- integration with slack messages on failures
 
 QA - Independence
 =================
 
  - get QA dev env working on Kube
- - add setup config to Confluence
- - communicate to team
+ 6. - add setup config to Confluence
+ 7. - communicate to team
 
 ##QA - Env in Kube
 
- - deploy new namespace to kube
+ 5.- test QA-dev deployment running slimmed down dev env setup locally
 
 
 NEED HELP
@@ -43,13 +44,15 @@ Q/A
  Q - can we automate this process going foward?
 
 
-SnapShot API Testing
-====================
-https://github.com/syrusakbary/snapshottest
-
-
 Inventory API Tests
 ===================
 
  - bulk inventory create/overwrite multiple inventories happy path
  - update inventory scenarios
+
+
+SnapShot API Testing
+====================
+https://github.com/syrusakbary/snapshottest
+
+
