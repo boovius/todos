@@ -1,10 +1,10 @@
 QA - e2e - CI
 =============
 
- 1.- fix migrations for CI setup locally
- 2.- run successful unscheduled e2e pipeline build
- 3.- schedule runs
- 4.- integration with slack messages on failures
+ 1. fix migrations for CI setup locally
+ 2. run successful unscheduled e2e pipeline build
+ 3. schedule runs
+ 4. integration with slack messages on failures
 
 QA - Independence
 =================
@@ -13,9 +13,9 @@ QA - Independence
  6. - add setup config to Confluence
  7. - communicate to team
 
-##QA - Env in Kube
+## QA - Env in Kube
 
- 5.- test QA-dev deployment running slimmed down dev env setup locally
+ 5. test QA-dev deployment running slimmed down dev env setup locally
 
 
 NEED HELP
