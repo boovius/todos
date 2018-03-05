@@ -32,6 +32,12 @@ NEED HELP
  - updating deployments (automating the update of deployments - after staging deploys in microservices's jenkins files) *#ops* *#dane*
 
 
+Updates and Nice to Haves
+=========================
+
+ - set WEB_URL env variable when doing j_start_e2e to http://www
+
+
 Q/A
 ===
  Q - how do we set versions to staging in kube admin deploys?
