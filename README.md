@@ -1,21 +1,11 @@
 QA - e2e - CI
 =============
 
- 1. fix migrations for CI setup locally
- 2. run successful unscheduled e2e pipeline build
- 3. schedule runs
- 4. integration with slack messages on failures
+ 1. integration with slack messages on failures
+ 2. script up moving forward with CI - automation on staging deploys
 
 QA - Independence
 =================
-
- - get QA dev env working on Kube
- 6. - add setup config to Confluence
- 7. - communicate to team
-
-## QA - Env in Kube
-
- 5. test QA-dev deployment running slimmed down dev env setup locally
 
 
 NEED HELP
@@ -25,7 +15,7 @@ NEED HELP
  - bringing down e2e, qa-dev, e2e-jenkins-spike deployments (feature_down not working) *#ops*
 
 ### migrations
- - migrations, django migrations need to be run *#ops*
+ - migrations, django migrations need to be run *#ops* (ops working on it currently 3/6/18)
 
 ### feature_up (mirror staging and auto deploys)
  - staging mirrored configuration (feature/values.yml - which services) to deploy to kube *#ops*
@@ -35,7 +25,7 @@ NEED HELP
 Updates and Nice to Haves
 =========================
 
- - set WEB_URL env variable when doing j_start_e2e to http://www
+ - set WEB_URL env variable by default when doing j_start_e2e to http://www
 
 
 Q/A
