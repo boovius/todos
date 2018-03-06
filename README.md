@@ -4,12 +4,8 @@ QA - e2e - CI
  1. integration with slack messages on failures
  2. script up moving forward with CI - automation on staging deploys
 
-QA - Independence
-=================
 
-
-NEED HELP
-=========
+## NEED HELP
 
 ### feature_down
  - bringing down e2e, qa-dev, e2e-jenkins-spike deployments (feature_down not working) *#ops*
@@ -18,7 +14,15 @@ NEED HELP
  - migrations, django migrations need to be run *#ops* (ops working on it currently 3/6/18)
 
 ### feature_up (mirror staging and auto deploys)
- - staging mirrored configuration (feature/values.yml - which services) to deploy to kube *#ops*
+ - updating deployments (automating the update of deployments - after staging deploys in microservices's jenkins files) *#ops* *#dane*
+
+
+QA - Independence
+=================
+
+## NEED HELP
+
+### feature_up (mirror staging and auto deploys)
  - updating deployments (automating the update of deployments - after staging deploys in microservices's jenkins files) *#ops* *#dane*
 
 
