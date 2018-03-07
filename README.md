@@ -1,18 +1,19 @@
 QA - e2e - CI
 =============
 
- 1. integration with slack messages on failures
- 2. script up moving forward with CI - automation on staging deploys
+ 1. confirm e2e runs on master are good
+ 2. update slack notification failure message to send to engineering channel
+ 3. update slack messages on failures to behave output
 
 
 ## NEED HELP
 
-### feature_up (mirror staging and auto deploys)
- - updating deployments (automating the update of deployments - after staging deploys in microservices's jenkins files) *#ops* *#dane*
+### slack notifications
+ - sending behave output to slack message notification on failure of e2e
 
-### migrations
- - migrations, django migrations need to be run *#ops* (ops working on it currently 3/6/18)
+## FUTURE WORK
 
+### automating deploys on build events
 
 
 Inventory API Tests
