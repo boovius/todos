@@ -13,10 +13,11 @@ we're trying to create one new inventory and update another inventory, while sof
 
 ##### oddities - problem 1:
  1. it seems that the new inventory records created during "overwrite" to update old ones are ALSO being SOFT-DELETED (set to deleted=True)
+ 1. it seems a TON of inventory_item records are suddenly created right after the test run but before cleaning (??? - wtf?!)
 
 ##### made to order - problem 2:
-from documentation:
- "If using the Overwrite setting, you can set a style to be "Made to Order" by not including it in your next load"
+ from documentation:
+   "If using the Overwrite setting, you can set a style to be "Made to Order" by not including it in your next load"
 
   - this actually seems to be working as expected currently
 
