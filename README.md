@@ -1,47 +1,22 @@
-QA - e2e - CI
+CURRENT WORK
 =============
 
- 1. confirm e2e runs on master are good
- 2. update slack notification failure message to send to engineering channel
- 3. update slack messages on failures to behave output
+# Update Inventory API Tests
 
+### current problem we're dealing with:
+we're trying to create one new inventory and update another inventory, while soft-deleting a third
 
-## NEED HELP
+#### current behavior:
+ - overwrite "updates" inventories included in request by CREATING new inventory records and SOFT-DELETING the old ones
+ - It does NOT "soft delete" inventory_item records not included in request. It leaves those not included in the request alone.
+ - It performs this "overwrite" update by creating a new inventory_item and linking that to a new inventory record, while setting prior inventory_item to "soft deleted"
 
-### slack notifications
- - sending behave output to slack message notification on failure of e2e
+##### oddities - problem 1:
+ - it seems that the new inventory records created during "overwrite" to update old ones are ALSO being SOFT-DELETED (set to deleted=True)
 
-## FUTURE WORK
+##### made to order - problem 2:
+from documentation:
+ "If using the Overwrite setting, you can set a style to be "Made to Order" by not including it in your next load"
 
-### automating deploys on build events
-
-
-Inventory API Tests
-===================
-
- - bulk inventory create/overwrite multiple inventories happy path
- - update inventory scenarios
-
-
-QA - Independence
-=================
-
-## NEED HELP
-
-### feature_up (mirror staging and auto deploys)
- - updating deployments (automating the update of deployments - after staging deploys in microservices's jenkins files) *#ops* *#dane*
-
-
-Updates and Nice to Haves
-=========================
-
- - set WEB_URL env variable by default when doing j_start_e2e to http://www
- - feature_down not working
-
-
-
-SnapShot API Testing
-====================
-https://github.com/syrusakbary/snapshottest
-
+  - this actually seems to be working as expected currently
 
