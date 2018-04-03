@@ -1,23 +1,23 @@
 CURRENT WORK
 =============
 
-# Update Inventory API Tests
+# API LOGGING
 
-### current problem we're dealing with:
-we're trying to create one new inventory and update another inventory, while soft-deleting a third
+problem: we are not getting account info into logging - instrumentation middleware
 
-#### current behavior:
- 1. overwrite "updates" inventories included in request by CREATING new inventory records and SOFT-DELETING the old ones
- 1. It does NOT "soft delete" inventory_item records not included in request. It leaves those not included in the request alone.
- 1. It performs this "overwrite" update by creating a new inventory_item and linking that to a new inventory record, while setting prior inventory_item to "soft deleted"
+posits:
 
-##### oddities - problem 1:
- 1. it seems that the new inventory records created during "overwrite" to update old ones are ALSO being SOFT-DELETED (set to deleted=True)
- 1. it seems a TON of inventory_item records are suddenly created right after the test run but before cleaning (??? - wtf?!)
+ - account is not set in middleware chain at all
+ - account not set in middleware chain where we think it should be
 
-##### made to order - problem 2:
- from documentation:
-   "If using the Overwrite setting, you can set a style to be "Made to Order" by not including it in your next load"
+solutions:
 
-  - this actually seems to be working as expected currently
+ 1. pull account information out when we auth the token now and add account to request object
+ 1. use code from auth and factor out into another custom middleware or update instrumentation middleware
+
+
+investigation steps:
+
+ 1. are we setting the account somewhare in the middleware chain at all?
+ 1. can we set it by making use of auth functionality (from auth token)
 
