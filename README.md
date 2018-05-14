@@ -1,23 +1,35 @@
 CURRENT WORK
 =============
 
-# API LOGGING
+Integrations - Assortment Export
+--------------------------------
 
-problem: we are not getting account info into logging - instrumentation middleware
+## Dump (generator of) Dict(s) (from sql output) to CSV
 
-posits:
+### Outcome
 
- - account is not set in middleware chain at all
- - account not set in middleware chain where we think it should be
+ take in a generator of dictonaries and produce a CSV
 
-solutions:
+### Steps
+ 1. run the query of staging db - see what the data looks like
+ 1. run psycopg2 examples of iterable cursors
+ 1. examine CSV usage in python, how currently used in project
+ 1. examine python testing in project
+ 1. examine structure of project - determine where to put implementation and test files
 
- 1. pull account information out when we auth the token now and add account to request object
- 1. use code from auth and factor out into another custom middleware or update instrumentation middleware
 
 
-investigation steps:
 
- 1. are we setting the account somewhare in the middleware chain at all?
- 1. can we set it by making use of auth functionality (from auth token)
 
+
+
+
+
+
+## Items to learn
+ 1. SQLAlchemy Core
+
+## Working with data on staging db on local
+ 1. dump staging data to local
+ 1. copy certain tables with postgres copy command to files
+ 1. use SCP (secure copy) to copy files from foreign server to local
