@@ -4,32 +4,24 @@ CURRENT WORK
 Integrations - Assortment Export
 --------------------------------
 
-## Dump (generator of) Dict(s) (from sql output) to CSV
+### send success email
 
-### Outcome
+#### questions
 
- take in a generator of dictonaries and produce a CSV
+  1. How can we determine number of assortments exported? How are we splitting out the assortments in export?
+  1. How much can we make use of integrations_mailers previously written by jyeo?
+  1. When are we sending this email? (after output of file, after brickftp transfer?)
 
-### Steps
- 1. run the query of staging db - see what the data looks like
- 1. run psycopg2 examples of iterable cursors
- 1. examine CSV usage in python, how currently used in project
- 1. examine python testing in project
- 1. examine structure of project - determine where to put implementation and test files
-
+##### How much can we make use of integrations_mailers previously written by jyeo?
+  - quite a bit, need to create a class that inherits from integrations.email.common.IntegrationMailer
+  - class would override get_body() and get_subject() methods and send in assortment_export stats into self.send_data mailer_class.send(data={assortment_exports: ...})
 
 
 
 
 
 
-
-
-
-## Items to learn
- 1. SQLAlchemy Core
-
-## Working with data on staging db on local
+### Working with data on staging db on local
  1. dump staging data to local
  1. copy certain tables with postgres copy command to files
  1. use SCP (secure copy) to copy files from foreign server to local
